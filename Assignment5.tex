@@ -1,0 +1,50 @@
+\documentclass[journal,twocolumn]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\title{Assignment 5}
+\author{NIMMALA AVINASH(CS21BTECH11039)}
+\begin{document}
+
+\maketitle
+
+{\LARGE \textbf{Question:\\}}
+\begin{Large}
+Show that $\myvec{n \\ k}p^{k}q^{n-k}  \simeq \frac{1}{\sqrt{2\pi npq}}e^{\frac{-(k-np)^{2}}{2npq}}$ with p+q = 1 is a special case of $ \frac{n!}{k_{1}! \cdots k_{r}!}$ $p_{1}^{k_{1}} \cdots  p_{r}^{k_{r}}  \simeq \frac{e^{\{ -\frac{1}{2}[\frac{(k_{1}-np_{1})^{2}}{np_{1}}+ ..... + \frac{(k_{r}-np_{r}}{np_{r}}]\}}}{\sqrt{(2\pi n)^{r-1} p_{1} \cdots p_{r}}}$ obtained with $ r=2,k_{1}=k,k_{2}=n-k,p_{1}=p,p_{2}=1-p.\\ $
+
+{\LARGE \textbf{Solution:\\}}
+With $r = 2,k_{1} = k,k_{2} = n-k,p_{1} = p,p_{2} = 1-p = q$,we obtain  \\
+\begin{align}
+k_{1} - np_{1} &= k-np  \\
+k_{2} -np_{2} &= n-k-nq = np-k 
+\end{align}
+hence,the bracket in general equation equals:-\\
+\begin{align}\frac{(k_{1}-np_{1})^{2}}{np_{1}}+\frac{(k_{2}-np_{2})^{2}}{np_{2}} &= \frac{(k-np)^{2}}{n}(\frac{1}{p}+\frac{1}{q})\\
+\frac{(k-np)^{2}}{n}(\frac{1}{p}+\frac{1}{q}) &= \frac{(k-np)^{2}}{npq}\\
+\end{align}
+From L.H.S of general equation,\\
+\begin{align}
+L.H.S &=\frac{n!}{k_{1}! \cdots k_{r}!}p_{1}^{k_{1}} \cdots p_{r}^{k_{r}}\\
+\implies &= \frac{n!}{k!.(n-k)!}p^{k}(1-p)^{n-k}\\
+\implies L.H.S&=\myvec{n \\ k}p^{k}(1-p)^{n-k}
+\end{align}
+From R.H.S of general equation\\
+\begin{align}
+R.H.S &= \frac{e^{\{\frac{-1}{2}[\frac{(k_{1}-np_{1})^{2}}{np_{1}}+ \cdots +\frac{(k_{r}-np_{r})^{2}}{np_{r}}]\}}}{\sqrt{(2\pi n)^{r-1}p_{1}\cdots p_{r} }}\\
+\end{align}
+From equation-(3)\\
+\begin{align}
+\implies &=\frac{e^{\{\frac{-1}{2}[\frac{(k-np)^{2}}{np(1-p)}]\}}}{\sqrt{(2\pi n)^{1}p(1-p)}}\\
+\therefore R.H.S &= \frac{e^{\frac{-(k-np)^{2}}{2np(1-p)}}}{\sqrt{2\pi np(1-p)}}
+\end{align}
+Join L.H.S and R.H.S of modified general equation i.e., (eq-(7)and eq-(11))\\
+\begin{align}
+\myvec{n \\ k}p^{k}(1-p)^{n-k} \simeq \frac{e^{\frac{-(k-n p)^{2}}{2np(1-p)}}}{\sqrt{2\pi np(1-p)}}\\
+(q = 1-p) \\
+\myvec{n \\ k}p^{k}q^{n-k}  \simeq \frac{1}{\sqrt{2\pi npq}}e^{\frac{-(k-np)^{2}}{2npq}}
+\end{align}
+\end{Large}
+\end{document}
